@@ -35,14 +35,9 @@ insert into productos(id_tipo_producto, nombre, valor_venta) values (1, 'costill
 insert into productos(id_tipo_producto, nombre, valor_venta) values (2, 'banano criollo (1lb)', 1900);
 insert into productos(id_tipo_producto, nombre, valor_venta) values (2, 'fresa (1lb)', 12500);
 
-insert into inventario(id_producto, cantidad) values (1, 2);
-insert into inventario(id_producto, cantidad) values (2, 3);
-insert into inventario(id_producto, cantidad) values (3, 14);
-insert into inventario(id_producto, cantidad) values (4, 7);
-
-select * from tipo_productos;
-select * from productos;
-select * from inventario;
+-- select * from tipo_productos;
+-- select * from productos;
+-- select * from inventario;
 
 -- Trigger
 delimiter !
@@ -65,4 +60,8 @@ end
 !
 delimiter ;
 
-drop trigger insercion_valor_total_productos;
+insert into inventario(id_producto, cantidad) values (1, 2);
+insert into inventario(id_producto, cantidad) values (2, 3);
+insert into inventario(id_producto, cantidad) values (3, 14);
+insert into inventario(id_producto, cantidad) values (4, 7);
+-- drop trigger insercion_valor_total_productos;
